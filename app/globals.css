@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/*
+ * Partner portal design tokens.
+ *
+ * Deliberately the same palette as the admin console — orange on slate — so a
+ * partner and an operator looking at the same order see one product rather
+ * than two. Nothing here is dark-mode aware: partners use this on a shop
+ * counter in daylight, and a half-finished dark theme reads worse than none.
+ */
+
+:root {
+  --brand: #f56a22;
+  --brand-dark: #d9551a;
+  --brand-soft: #fff3ec;
+
+  --ink: #0f172a;
+  --muted: #64748b;
+  --faint: #94a3b8;
+  --line: #e2e8f0;
+  --surface: #f8fafc;
+
+  --ok: #15803d;
+  --ok-soft: #dcfce7;
+  --warn: #b45309;
+  --warn-soft: #fef3c7;
+  --bad: #b91c1c;
+  --bad-soft: #fee2e2;
+  --info: #1d4ed8;
+  --info-soft: #dbeafe;
+}
+
+@theme inline {
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-soft: var(--brand-soft);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+}
+
+html,
+body {
+  background: var(--surface);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tabular figures everywhere money appears, so columns of rupees line up. */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
